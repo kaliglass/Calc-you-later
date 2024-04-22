@@ -22,3 +22,19 @@ function operate(a,operation,b){
             break;
     }
 }
+
+let op1 = 0;
+let op2 = 0;
+
+const digits = document.querySelectorAll(".num");
+const display = document.querySelector(".display");
+
+digits.forEach((button)=>
+    {button.addEventListener("click",()=>
+        displayDigit(button))
+    });
+
+function displayDigit(button){
+    display.textContent += button.textContent;
+    op1 = Number (display.textContent);
+}
