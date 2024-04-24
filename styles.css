@@ -17,6 +17,7 @@ body{
     height: 90px;
     background-color: #b2b9b7;
     border: 5px black solid;
+    
 }
 .nums,.controls{
     display: flex;

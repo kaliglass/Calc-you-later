@@ -23,18 +23,37 @@ function operate(a,operation,b){
     }
 }
 
-let op1 = 0;
-let op2 = 0;
+
 
 const digits = document.querySelectorAll(".num");
 const display = document.querySelector(".display");
+const cancel = document.querySelector(".cancel");
+const del  = document.querySelector(".del");
+const operation  = document.querySelectorAll(".operation");
 
-digits.forEach((button)=>
-    {button.addEventListener("click",()=>
-        displayDigit(button))
-    });
+let ope;
+operation.forEach(button => {
+    button.addEventListener("click",()=>{
+    let ope = button.textContent;
+})
+});
 
-function displayDigit(button){
-    display.textContent += button.textContent;
-    op1 = Number (display.textContent);
-}
+
+
+cancel.addEventListener("click",()=>{
+    display.textContent = ""
+});
+
+del.addEventListener("click",()=>{
+    display.textContent= display.textContent.replace(/.$/, '')
+});
+
+
+digits.forEach(button => {
+    button.addEventListener("click",() => {
+        display.textContent += button.textContent;
+    })
+})
+
+
+// console.log(op1);
