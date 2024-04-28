@@ -17,7 +17,7 @@ body{
     height: 90px;
     background-color: #b2b9b7;
     border: 5px black solid;
-    
+    font-size: 5em;
 }
 .nums,.controls{
     display: flex;
