@@ -105,6 +105,8 @@ digits.forEach(button => {
     })
 })
 
-
+document.addEventListener("keypress",(event)=>{
+    display.textContent += event.key;
+})
 
 
